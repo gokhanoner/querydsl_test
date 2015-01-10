@@ -61,7 +61,6 @@ public class QueryDslTest {
 	@Test
 	public void test1_nativeQueryDsl() throws SQLException {	
 		QUsers qUsers = new QUsers("users");
-		
 		SQLQuery query = new SQLQuery(dataSource.getConnection(), dialect);
 		
 		List<Users> users = query.from(qUsers)

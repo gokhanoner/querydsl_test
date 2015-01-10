@@ -90,4 +90,16 @@ public class QueryDslTest {
 		Assert.notEmpty(users);
 	}
 
+	@Test
+	public void test4_springQueryDslJdbcTemplate() throws SQLException {
+		QUsers qUsers = new QUsers("users");
+		
+		SQLQuery sqlQuery = queryDslJdbcTemplate.newSqlQuery()
+						.from(qUsers)
+						.where(qUsers.enabled.eq(true));
+		
+		List<Users> users = queryDslJdbcTemplate.query(sqlQuery, qUsers);
+		
+		Assert.notEmpty(users);
+	}
 }

@@ -6,3 +6,5 @@
 .settings/org.eclipse.core.resources.prefs
 
 *.prefs
+
+target/classes/com/oner/querydsl/Application.class

@@ -88,8 +88,6 @@ public class QueryDslTest {
 				.list(qUsers);
 		
 		Assert.notEmpty(users);
-		
-		Assert.notEmpty(users);
 	}
 
 }
